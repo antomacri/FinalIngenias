@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrailerFlix</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url('prueba2/images/Titulotrailerflix.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        ul {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 20px;
+        }
+
+        a {
+            display: block;
+            text-align: left;
+        }
+
+        .btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a TrailerFlix</h1>
+    <p>¡Explora y disfruta de series y películas!</p>
+
+    <div>
+        <a href="/inicio" class="btn">Inicio</a>
+        <a href="/catalogo" class="btn">Catálogo</a>
+        <a href="/registrarse" class="btn">Registrarse</a>
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <form action="/buscar" method="get">
+        <input type="text" name="q" placeholder="Buscar">
+        <button type="submit" class="btn">Buscar</button>
+    </form>
+
+    <ul>
+        <% catalogo.forEach(item => { %>
+            <li>
+                <strong><%= item.titulo %></strong>
+                <br>
+                <img src="<%= item.imagen %>" alt="<%= item.titulo %>">
+                <br>
+                <iframe width="560" height="315" src="<%= item.trailer %>" frameborder="0" allowfullscreen></iframe>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

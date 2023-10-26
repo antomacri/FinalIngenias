@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inicio - TrailerFlix</title>
+  <style>
+    .btn {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <a href="/catalogo" class="btn">Catálogo</a>
+      <a href="/categoria" class="btn">Categoría</a>
+      <a href="/inicio" class="btn">Inicio</a>
+     
+    </div>
+    <h1 style="text-align: center;">Bienvenido a TrailerFlix</h1>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <% catalogo.forEach(item => { %>
+      <div style="margin: 20px; text-align: center;">
+        <h2><%= item.titulo %></h2>
+        <video width="320" height="240" controls>
+          <source src="<%= item.trailer %>" type="video/mp4">
+        </video>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>
+

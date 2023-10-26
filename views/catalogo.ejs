@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Catálogo de Películas y Series</h1>
+  </div>
+  <div style="text-align: left;">
+    <!-- Botón para ir al inicio -->
+    <a href="/inicio">
+      <button style="background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none">Ir a inicio</button>
+    </a>
+  </div>
+  <!-- Catálogo de películas y series (centrado verticalmente) -->
+  <ul style="display: flex; flex-direction: column; align-items: center;">
+    <% catalogo.forEach(item => { %>
+      <li>
+        <strong><%= item.titulo %></strong> - <%= item.categoria %>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+
+</html>
