@@ -95,7 +95,7 @@ graph TD;
         "stock": 50
     },
     
-
+```
 ¡Explora y disfruta trabajando con la base de datos de Trailerflix!
 
 Agradecemos enormemente el apoyo , el profesionalismo , la enseñanza y paciencia de las profesoras . Estamos muy felices de llegar hasta aca con muchas lagrimas y stres pero hemos logrado aprender y a incorporar todos los conocimiento , Ahora es cuestion de practica !! . 
