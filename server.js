@@ -6,25 +6,26 @@ const path = require('path'); // Debes importar el módulo path
 
 
 function obtenerCatalogo() {
-  // Aquí cargas o generas los datos del catálogo y los devuelves en un array
+  
   return [
     { titulo: 'The Mandalorian', categoria: 'Acción' },
     { titulo: 'The Umbrella Academy', categoria: 'Drama' },
-    // Agrega más elementos según sea necesario
+    
   ];
 }
 
-// Configura el motor de plantillas EJS
 app.set('view engine', 'ejs');
 
-// Ruta para la página de inicio
 app.get('/inicio', (req, res) => {
   // Obtiene el catálogo
   const catalogo = obtenerCatalogo();
-  // Renderiza la vista 'inicio.ejs' y pasa la variable 'catalogo' a la vista
+  
   res.render('inicio', { catalogo: catalogo });
 });
 
+app.get("/registrarse", (req, res) => {
+  res.render("registrarse"); 
+});
 
 app.get('/cargar-datos', (req, res) => {
   try {
